@@ -10,3 +10,5 @@ ReactDOM.createRoot(document.getElementById("root")).render(
     </Routes>
   </BrowserRouter>
 );
+
+// bg-gradient-to-r from-[#ff26b9] via-[#d434fe] to-[#903aff]

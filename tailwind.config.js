@@ -8,6 +8,8 @@ export default {
       },
       screens: {
         "1000px": "1000px",
+        "max-1000": { max: "1000px" },
+        "max-850": { max: "850px" },
       },
     },
   },

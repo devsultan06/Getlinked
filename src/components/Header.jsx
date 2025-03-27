@@ -1,7 +1,6 @@
 /* eslint-disable no-unused-vars */
 import CurvedLine from "./CurvedLine";
-import Navbar from "./Navbar/Navbar";
-import NavbarHook from "./NavbarHook/NavbarHook";
+import Navbar from "./Navbar";
 import Man from "/image/man-wearing-smart-glasses-touching-virtual-screen 1.png";
 import TitleWithTypingEffect from "./TitleWithypingEffect";
 import Star from "/image/image1.png";
@@ -16,8 +15,7 @@ import Star4 from "/image/starPu7.png";
 const Header = () => {
   return (
     <header className=" text-white bg-[#150e28] all ">
-      {/* <Navbar /> */}
-      <NavbarHook />
+      <Navbar />
       <div className="circle1 bg-no-repeat bg-cover absolute bg-purple-lens-flare pointer-events-none "></div>
       <div className="circle2 bg-no-repeat bg-cover absolute bg-purple-lens-flare left-[561px] top-0 w-[971px] h-[994px] pointer-events-none"></div>
       <div className="title pt-[120px]">
