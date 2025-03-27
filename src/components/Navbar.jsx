@@ -24,7 +24,7 @@ const Navbar = () => {
   }, []);
 
   return (
-    <header className="header flex justify-between items-center px-[120px] max-1000:px-[20px] w-full pt-[30px]">
+    <header className="header flex justify-between border-b border-[#753386] items-center px-[120px] max-1000:px-[20px] w-full py-[30px]">
       <NavLink to="/" className="nav__logo text-2xl font-semibold">
         get<span className="text-[#D434FE]">linked</span>
       </NavLink>
@@ -40,7 +40,7 @@ const Navbar = () => {
                 {link.label}
               </NavLink>
             </li>
-          ))}
+          ))}   
           <button className="register bg-gradient-to-r from-[#ff26b9] via-[#d434fe] to-[#903aff] text-white py-2.5 px-8 rounded cursor-pointer">
             Get Started
           </button>
@@ -57,10 +57,10 @@ const Navbar = () => {
           animate={{ x: 0 }}
           exit={{ x: "100%" }}
           transition={{ duration: 0.4, ease: "easeInOut" }}
-          className="fixed top-0 right-0 w-full h-screen px-[60px] bg-[#150E28] text-white  z-50"
+          className="fixed top-0 right-0 w-[100%] h-screen px-[60px] bg-[#150E28] text-white  z-50"
         >
           <div
-            className="absolute top-6 right-6 cursor-pointer"
+            className="absolute right-[230px] top-3  cursor-pointer"
             onClick={toggleMenu}
           >
             <img src={close} alt="Close Menu" />
