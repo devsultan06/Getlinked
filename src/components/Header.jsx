@@ -35,8 +35,8 @@ const Header = () => {
                   alt=""
                   className=" w-[50px] h-[50px] absolute top-[-40px] left-[300px]"
                 />
-                <img src={Chain} alt="" className="chain absolute w-[50px] h-[50px] top-[55px] left-[330px] z-0" />
-                <img src={Boom} alt="" className="boom absolute w-[50px] h-[50px] top-[55px] left-[310px] z-0" />
+                <img src={Chain} alt="" className="chain absolute w-[50px] h-[50px] top-[55px] max-1000:top-[50px] left-[350px] max-1000:left-[330px] z-0" />
+                <img src={Boom} alt="" className="boom absolute w-[50px] h-[50px] top-[55px] max-1000:top-[48px] left-[400px] max-1000:left-[-5px] z-0" />
                 <img src={Star2} alt="" className="small-star absolute w-[50px] h-[50px] top-[-120px] max-1000:top-[-80px] left-[40px]" />
 
 
