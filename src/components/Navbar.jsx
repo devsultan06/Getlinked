@@ -57,10 +57,10 @@ const Navbar = () => {
           animate={{ x: 0 }}
           exit={{ x: "100%" }}
           transition={{ duration: 0.4, ease: "easeInOut" }}
-          className="fixed top-0 right-0 w-[100%] h-screen px-[60px] bg-[#150E28] text-white  z-50"
+          className="fixed top-0 right-0 w-full  h-screen px-[60px] bg-[#150E28] text-white  z-50"
         >
           <div
-            className="absolute right-[230px] top-3  cursor-pointer"
+            className="absolute right-2 top-3  cursor-pointer"
             onClick={toggleMenu}
           >
             <img src={close} alt="Close Menu" />

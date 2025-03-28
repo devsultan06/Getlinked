@@ -14,25 +14,32 @@ import Star4 from "/image/starPu7.png";
 
 const Header = () => {
   return (
-    <header className=" text-white bg-[#150e28] all ">
+    <header className=" text-white bg-[#150e28] border-b border-[#753386] ">
       <Navbar />
       <div className="circle1 bg-no-repeat bg-cover absolute bg-purple-lens-flare pointer-events-none "></div>
       <div className="circle2 bg-no-repeat bg-cover absolute bg-purple-lens-flare left-[561px] top-0 w-[971px] h-[994px] pointer-events-none"></div>
-      <div className="title pt-[120px]">
+        <TitleWithTypingEffect />
+      <div className="title">
         <div className="all-inner">
-          <TitleWithTypingEffect />
-
-          <div className="box relative flex items-start justify-between w-full">
+          <div className="box flex pt-[200px] items-start justify-between w-full">
             <div className="text">
-              <h1 className="text-5xl font-bold mb-3">getlinked Tech</h1>
+              <div className="relative">
+                <h1 className="text-5xl font-bold mb-3">getlinked Tech</h1>
 
-              <h1 className="text-5xl font-bold mb-6 ">
-                Hackathon <span className="text-[#D434FE]">1.0</span>{" "}
-              </h1>
-              <p className="mb-6">
-                Participate in getlinked tech Hackathon 2023 stand a chance to
-                win a Big prize
-              </p>
+                <h1 className="text-5xl font-bold mb-6 ">
+                  Hackathon <span className="text-[#D434FE]">1.0</span>{" "}
+                </h1>
+                <p className="mb-6">
+                  Participate in getlinked tech Hackathon 2023 stand a chance to
+                  win a Big prize
+                </p>
+                <img
+                  src={Creative1}
+                  alt=""
+                  className=" w-[50px] h-[50px] absolute top-[-40px] left-[300px]"
+                />
+              </div>
+
               <div className="button">
                 <button
                   to="/get-started"
@@ -52,12 +59,11 @@ const Header = () => {
             </div>
           </div>
         </div>
-        <img src={Star2} alt="" className="small-star" />
-        <img src={Creative1} alt="" className="creative1" />
+        {/* <img src={Star2} alt="" className="small-star" />
         <img src={Boom} alt="" className="boom" />
         <img src={Chain} alt="" className="chain" />
         <img src={Star3} alt="" className="star3" />
-        <img src={Star4} alt="" className="star4" />
+        <img src={Star4} alt="" className="star4" /> */}
       </div>
     </header>
   );

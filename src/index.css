@@ -4,18 +4,16 @@
 
 * {
   font-family: "Poppins", sans-serif;
+  max-width: 100vw; /* Prevents any element from exceeding the viewport width */
+
 }
 
 body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  overflow-x: hidden;
   width: 100%;
-}
-
-.all {
-  border-bottom: 2px solid #753386;
+  overflow-x: hidden;
 }
 
 .circle1 {
@@ -37,11 +35,6 @@ ul li a:hover {
   -webkit-text-fill-color: transparent;
 }
 
-.curved-line {
-  stroke-dasharray: 200; /* Adjust this based on the length of your path */
-  stroke-dashoffset: 200; /* Same as dasharray to start hidden */
-  animation: draw-line 5s ease forwards;
-}
 
 div.all-inner {
   padding: 0px 120px;
@@ -56,14 +49,6 @@ img.small-star {
   animation: moveAround 10s linear infinite;
 }
 
-img.creative1 {
-  width: 50px;
-  height: 50px;
-  position: absolute;
-  top: 280px;
-  left: 420px;
-  animation: wanderAround 10s linear infinite;
-}
 
 img.boom {
   width: 50px;
@@ -107,13 +92,8 @@ div.image img {
   height: 500px;
 }
 
-.typing-container {
-  width: 560px; /* Set a fixed width */
-  white-space: nowrap; /* Ensure text stays on one line */
-  text-align: right; /* Align text to the right */ /* Text flow from right to left */
-  white-space: nowrap; /* Ensure the text remains on one line */
-}
 
+/* 
 @keyframes draw-line {
   to {
     stroke-dashoffset: 0;
@@ -193,7 +173,7 @@ div.image img {
   100% {
     transform: translate(0, 0);
   }
-}
+} */
 
 div.introduction,
 div.rules {
@@ -307,13 +287,6 @@ div.faq-image{
 
 
 @media screen and (max-width: 600px) {
-  .circle1 {
-    width: 800px;
-    left: -200px;
-  }
-  .circle2 {
-    display: none;
-  }
 
   .rules .circle1 {
     left: -400px;
@@ -321,6 +294,10 @@ div.faq-image{
     width: 900px;
     height: 836px;
     z-index: 0;
+  }
+
+  .circle2{
+    display: none;
   }
 }
 
@@ -341,10 +318,6 @@ div.faq-image{
     z-index: 0;
   }
 
-  div.title-inner {
-    margin-top: 100px;
-    width: 100%;
-  }
 
   div.all-inner {
     padding: 0px 10px;
@@ -369,23 +342,6 @@ div.faq-image{
     width: 100%;
   }
 
-  .typing-container {
-    width: 460px; /* Set a fixed width */
-  }
-
-  h1.title {
-    font-size: 20px;
-    font-weight: 600;
-  }
-
-  img.creative1 {
-    width: 30px;
-    height: 30px;
-    position: absolute;
-    top: 330px;
-    left: 300px;
-    animation: wanderAround 10s linear infinite;
-  }
 
   img.boom {
     width: 30px;
