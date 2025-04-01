@@ -5,13 +5,13 @@ import Star from "/image/sataGra5.png";
 import Arrow from "/image/arrow.png";
 const Rules = () => {
   return (
-    <div className="rules bg-[#150e28] text-white border-b border-[#753386]">
+    <div className="rules flex flex-col-reverse md:flex-row bg-[#150e28] text-white border-b border-[#753386]">
       <div className="circle1 bg-no-repeat bg-cover absolute bg-purple-lens-flare pointer-events-none "></div>
       <div className="circle2 bg-no-repeat bg-cover absolute bg-purple-lens-flare right-[-400px] top-0 w-[971px] h-[994px] pointer-events-none"></div>
       <div className="rules-into">
         <h2 className="text-3xl font-bold ">Rules and</h2>
         <h2 className="text-[#D434FE] text-3xl font-bold mb-6">Guidelines</h2>
-        <p>
+        <p className="w-[600px] max-1000:w-full">
           Our tech hackathon is a melting pot of visionaries, and its purpose is
           as clear as day: to shape the future. Whether you're a coding genius,
           a design maverick, or a concept wizard, you'll have the chance to
@@ -22,7 +22,7 @@ const Rules = () => {
       </div>
 
       <div className="rules-image">
-        <img src={Woman} alt="" className="" />
+        <img src={Woman} alt="" className="w-[500px]" />
       </div>
 
       <div className="images">

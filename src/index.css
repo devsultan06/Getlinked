@@ -5,7 +5,6 @@
 * {
   font-family: "Poppins", sans-serif;
   max-width: 100vw; /* Prevents any element from exceeding the viewport width */
-
 }
 
 body {
@@ -35,7 +34,6 @@ ul li a:hover {
   -webkit-text-fill-color: transparent;
 }
 
-
 div.all-inner {
   padding: 0px 120px;
   position: relative;
@@ -58,7 +56,6 @@ img.star4 {
   left: 820px;
   animation: floatAround 10s linear infinite;
 }
-
 
 /* 
 @keyframes draw-line {
@@ -178,17 +175,13 @@ div.into-img {
   z-index: 1000;
 }
 
-div.rules {
-  padding-left: 200px;
-}
-
-div.rules-image,
-div.rules-into {
-  z-index: 10000;
-}
 .star6,
-.arrow,
 .star5 {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+}
+.arrow {
   position: absolute;
   width: 50px;
   height: 50px;
@@ -213,32 +206,6 @@ div.rules-into {
   animation: wanderAround 10s linear infinite;
 }
 
-div.faqs {
-  margin-top: 50px;
-}
-
-div.faq {
-  width: 500px;
-  margin-top: 20px;
-  border-bottom: 1px solid #d434fe;
-}
-
-div.faq img {
-  cursor: pointer;
-}
-
-p.answer {
-  text-align: justify;
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.3s ease;
-}
-
-p.answer.open {
-margin-bottom: 20px;
-  max-height: 150px; /* Adjust based on content size */
-}
-
 div.box2 {
   display: flex;
   align-items: center;
@@ -247,14 +214,11 @@ div.box2 {
   cursor: pointer;
 }
 
-div.faq-image{
+div.faq-image {
   flex-shrink: 0;
 }
 
-
-
 @media screen and (max-width: 600px) {
-
   .rules .circle1 {
     left: -400px;
     top: -0px;
@@ -263,28 +227,17 @@ div.faq-image{
     z-index: 0;
   }
 
-  .circle2{
+  .circle2 {
     display: none;
   }
 }
 
 @media screen and (max-width: 1000px) {
-  div.faq {
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
-    width: 400px;
-  }
-
-  div.faq p {
-    font-size: 14px;
-  }
   div.box {
     display: block;
     text-align: center;
     z-index: 0;
   }
-
 
   div.all-inner {
     padding: 0px 10px;
@@ -309,7 +262,6 @@ div.faq-image{
     width: 100%;
   }
 
-
   img.star3 {
     width: 50px;
     height: 50px;
@@ -329,7 +281,15 @@ div.faq-image{
   }
 
   div.introduction,
-  div.rules,
+  div.rules {
+    flex-direction: column;
+    flex-direction: column-reverse;
+    text-align: center;
+    border-bottom: 1px solid #753386;
+    padding: 100px 10px;
+    gap: 30px;
+  }
+
   div.criteria {
     flex-direction: column;
     text-align: center;
@@ -340,13 +300,6 @@ div.faq-image{
 
   div.criterias {
     padding: 25px;
-  }
-  div.rules {
-    flex-direction: column-reverse;
-    margin-top: -200px;
-  }
-  div.rules-image {
-    width: 100%;
   }
   div.into {
     width: 100%;

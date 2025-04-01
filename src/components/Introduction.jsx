@@ -25,8 +25,16 @@ const Introduction = () => {
       </div>
 
       <div className="images">
-        <img src={Star} alt="" className="star5" />
-        <img src={Star} alt="" className="star6" />
+        <img
+          src={Star}
+          alt=""
+          className="star5 max-1000:left-[50px] max-1000:top-[250px]"
+        />
+        <img
+          src={Star}
+          alt=""
+          className="star6 max-1000:absolute max-1000:left-[350px] max-1000:top-[650px]"
+        />
         <img src={Arrow} alt="" className="arrow" />
       </div>
     </div>

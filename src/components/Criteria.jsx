@@ -16,7 +16,7 @@ const Criteria = () => {
         <h2 className="text-[#D434FE] text-3xl font-bold mb-6">
           Key attributes
         </h2>
-        <div className="criterias">
+        <div className="criterias w-[550px] max-1000:w-full">
           <p className="text-[14px]">
             <span className="text-[#FF26B9] font-semibold">
               {" "}
@@ -63,7 +63,7 @@ const Criteria = () => {
             or APIs, and any other competition-specific requirements.
           </p>
         </div>
-        <div className="button mt-4">
+        <div className="button mt-4 mb-[100px]">
           <button
             to="/get-started"
             className="register 
@@ -73,12 +73,6 @@ const Criteria = () => {
             Read More
           </button>
         </div>
-      </div>
-
-      <div className="images">
-        <img src={Star} alt="" className="star5" />
-        <img src={Star} alt="" className="star6" />
-        <img src={Arrow} alt="" className="arrow" />
       </div>
     </div>
   );

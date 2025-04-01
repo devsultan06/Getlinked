@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { motion } from "framer-motion";
 import faqimage from "../../public/image/faqimg.png";
 import plus from "../../public/image/plus.png";
 
@@ -38,32 +39,49 @@ const Faq = () => {
   ];
 
   return (
-    <div className="rules bg-[#150e28] text-white border-b border-[#753386]">
-      <div className="rules-into">
-        <h2 className="text-3xl font-bold">Frequently Ask</h2>
-        <h2 className="text-[#D434FE] text-3xl font-bold mb-6">Question</h2>
-        <p>
+    <div className="bg-[#150e28] text-white border-b border-[#753386] px-6 py-10 flex  flex-col-reverse md:flex-row md:items-center md:justify-between">
+      <div className="max-w-xl mx-auto text-center md:text-left">
+        <h2 className="text-3xl font-bold">Frequently Asked</h2>
+        <h2 className="text-[#D434FE] text-3xl font-bold mb-6">Questions</h2>
+        <p className="mb-6">
           We got answers to the questions that you might want to ask about
           getlinked Hackathon 1.0
         </p>
 
-        <div className="faqs">
+        <div className="space-y-4">
           {faqData.map((item, index) => (
-            <div className="faq" key={index}>
-              <div className="box2" onClick={() => toggleAnswer(index)}>
-                <p>{item.question}</p>
-                <img src={plus} alt="" />
+            <div key={index} className="border border-gray-600 rounded-lg p-4">
+              <div
+                className="flex justify-between items-start cursor-pointer"
+                onClick={() => toggleAnswer(index)}
+              >
+                <p className="font-semibold">{item.question}</p>
+                <motion.img
+                  src={plus}
+                  alt="Toggle"
+                  className="w-5 h-5"
+                  animate={{ rotate: openIndex === index ? 45 : 0 }}
+                  transition={{ duration: 0.3 }}
+                />
               </div>
-              <p className={`answer ${openIndex === index ? "open" : ""}`}>
-                {item.answer}
-              </p>
+              <motion.div
+                initial={{ height: 0, opacity: 0 }}
+                animate={{
+                  height: openIndex === index ? "auto" : 0,
+                  opacity: openIndex === index ? 1 : 0,
+                }}
+                transition={{ duration: 0.3 }}
+                className="overflow-hidden"
+              >
+                <p className="mt-2 text-gray-300">{item.answer}</p>
+              </motion.div>
             </div>
           ))}
         </div>
       </div>
 
-      <div className="rules-image">
-        <img src={faqimage} alt="FAQ Illustration" />
+      <div className="md:block md:w-1/3 lg:w-1/2">
+        <img src={faqimage} alt="FAQ Illustration" className="w-full" />
       </div>
     </div>
   );
